@@ -1,4 +1,4 @@
- # Python script to generate and simulate data
+# Python script to generate and simulate data
 import numpy as np
 
 def generate_true_parameters():

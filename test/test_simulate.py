@@ -1,6 +1,6 @@
 # Unit tests for simulation
 import unittest
-from simulate import generate_true_parameters, compute_predicted_statistics
+from src.simulate import generate_true_parameters, compute_predicted_statistics
 
 class TestSimulate(unittest.TestCase):
 

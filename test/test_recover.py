@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from src.simulate import forward_equations  # Import your forward function
+from src.simulate import compute_predicted_statistics  # Import your forward function
 
 class TestForwardEquations(unittest.TestCase):
     
@@ -10,7 +10,7 @@ class TestForwardEquations(unittest.TestCase):
         ν, α, τ = 1.0, 1.5, 0.3
 
         # Compute predicted summary statistics
-        R_pred, M_pred, V_pred = forward_equations(ν, α, τ)
+        R_pred, M_pred, V_pred = compute_predicted_statistics(ν, α, τ)
 
         # Check that values are within expected ranges
         self.assertGreaterEqual(R_pred, 0.5)
@@ -22,7 +22,7 @@ class TestForwardEquations(unittest.TestCase):
         """Test if drift rate of zero results in R_pred ~ 0.5."""
         ν, α, τ = 0.0, 1.0, 0.2  # Drift rate is 0
 
-        R_pred, _, _ = forward_equations(ν, α, τ)
+        R_pred, _, _ = compute_predicted_statistics(ν, α, τ)
         self.assertAlmostEqual(R_pred, 0.5, places=2)
 
 if __name__ == "__main__":
