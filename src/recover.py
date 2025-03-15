@@ -6,11 +6,13 @@ def recover_parameters(R_obs, M_obs, V_obs):
     epsilon = 1e-10  # Small constant to prevent division by zero
     L = np.log(R_obs / (1 - R_obs + epsilon))
 
-    print(f"Debug: R_obs = {R_obs}")
+    print(f"Debug: R_obs={R_obs}, M_obs={M_obs}, V_obs={V_obs}")
 
     v_est = np.sign(R_obs - 0.5) * 4 * np.sqrt((L * (R_obs**2 * L - R_obs * L + R_obs - 0.5)) / V_obs)
     a_est = L / v_est
     tau_est = M_obs - (a_est / (2 * v_est)) * ((1 - np.exp(-v_est * a_est)) / (1 + np.exp(-v_est * a_est)))
+    
+    print(f"Debug: v_est={v_est}, a_est={a_est}, tau_est={tau_est}")
     
     return v_est, a_est, tau_est
 

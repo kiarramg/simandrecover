@@ -23,6 +23,8 @@ def run_simulation(N, iterations=1000):
     avg_bias = np.mean(biases, axis=0)
     avg_squared_error = np.mean(squared_errors, axis=0)
 
+    print(f"Debug: v_true={v_true}, a_true={a_true}, tau_true={tau_true}")
+
     return avg_bias, avg_squared_error
 
 def main():
