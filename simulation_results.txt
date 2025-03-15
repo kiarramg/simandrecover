@@ -1,0 +1,12 @@
+N=10
+Average Bias: [nan nan nan]
+Average Squared Error: [nan nan nan]
+
+N=40
+Average Bias: [-21.24463273   0.93906986  -0.46025677]
+Average Squared Error: [8.09015078e+02 1.02804955e+00 2.80988429e-01]
+
+N=4000
+Average Bias: [-12.38527536   0.98570507  -0.45229254]
+Average Squared Error: [200.344998     1.14258569   0.26994611]
+

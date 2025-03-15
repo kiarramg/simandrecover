@@ -3,8 +3,11 @@ import numpy as np
 
 def recover_parameters(R_obs, M_obs, V_obs):
     """Estimate drift rate (v_est), boundary separation (a_est), and nondecision time (tau_est)."""
-    L = np.log(R_obs / (1 - R_obs))
-    
+    epsilon = 1e-10  # Small constant to prevent division by zero
+    L = np.log(R_obs / (1 - R_obs + epsilon))
+
+    print(f"Debug: R_obs = {R_obs}")
+
     v_est = np.sign(R_obs - 0.5) * 4 * np.sqrt((L * (R_obs**2 * L - R_obs * L + R_obs - 0.5)) / V_obs)
     a_est = L / v_est
     tau_est = M_obs - (a_est / (2 * v_est)) * ((1 - np.exp(-v_est * a_est)) / (1 + np.exp(-v_est * a_est)))
