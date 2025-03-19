@@ -8,6 +8,8 @@ def generate_true_parameters():
     tau = np.random.uniform(0.1, 0.5)  # Nondecision time
     return v, a, tau
 
+#everything above this line was drafted with the help of ChatGPT
+
 def compute_predicted_statistics(v, a, tau):
     # Ensure v is not zero to prevent division by zero error
     if v == 0:

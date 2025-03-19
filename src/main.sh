@@ -2,8 +2,7 @@
 #!/bin/bash
 
 # Ensure correct environment is activated (modify path if needed)
-source /usr/local/bin/python3  # Uncomment if using virtualenv
-# source activate your_conda_env          # Uncomment if using conda
+source /usr/local/bin/python3
 
 # Run the Python simulation script
 python3 src/main.py

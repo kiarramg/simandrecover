@@ -1,4 +1,4 @@
-# Python script to estimate parameters
+# Python script to estimate parameters and drafted with the help of ChatGPT
 import numpy as np
 
 def recover_parameters(R_obs, M_obs, V_obs):
