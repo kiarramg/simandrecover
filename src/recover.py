@@ -8,7 +8,7 @@ def recover_parameters(R_obs, M_obs, V_obs):
     L = np.log(R_obs / (1 - R_obs + epsilon))
 
     print(f"Debug: R_obs={R_obs}, M_obs={M_obs}, V_obs={V_obs}")
-
+# might be where the results are a little larger than expected
     v_est = np.sign(R_obs - 0.5) * ((L * (R_obs**2 * L - R_obs * L + R_obs - 0.5) / V_obs)**0.25)
     a_est = L / v_est
     tau_est = M_obs - (a_est / (2 * v_est)) * ((1 - np.exp(-v_est * a_est)) / (1 + np.exp(-v_est * a_est)))
