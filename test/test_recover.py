@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 from src.simulate import compute_predicted_statistics  # Import your forward function
-#note: drafted with the help of ChatGPT
+#drafted with the help of ChatGPT
 class TestForwardEquations(unittest.TestCase):
     
     def test_forward_equations(self):

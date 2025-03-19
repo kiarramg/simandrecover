@@ -1,4 +1,5 @@
-#!/usr/bin/env python3 & drafted with the help of ChatGPT 
+#!/usr/bin/env python3
+#drafted with the help of ChatGPT 
 import numpy as np
 from simulate import generate_true_parameters, compute_predicted_statistics, simulate_observed_statistics
 from recover import recover_parameters

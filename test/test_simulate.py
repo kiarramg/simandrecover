@@ -1,4 +1,5 @@
-# Unit tests for simulation & drafted with the help of ChatGPT
+# Unit tests for simulation
+# drafted with the help of ChatGPT
 import unittest
 from src.simulate import generate_true_parameters, compute_predicted_statistics
 
