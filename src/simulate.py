@@ -34,12 +34,6 @@ def compute_predicted_statistics(v, a, tau):
 
     return R_pred, M_pred, V_pred
 
-    # Compute R_pred and V_pred as usual
-    R_pred = 1 / (1 + y)  # formula 1
-    V_pred = (a / (2*(v**3))) * ((1 - 2 * a * v * y - y**2) / ((1 + y)**2))  # formula 3 + ensure variance is always positive
-
-    return R_pred, M_pred, V_pred
-
 
 def simulate_observed_statistics(R_pred, M_pred, V_pred, N):
     """Simulate observed accuracy, mean RT, and variance using sampling distributions."""
